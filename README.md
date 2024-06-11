@@ -1,5 +1,7 @@
 # Instance Augmentation
 
+Instance Augmentation method augment images by redrawing individual objects in the scene retaining their original shape. This allows training with the unchanged class label (e.g. class, segmentation, detection, etc.). The generations are highly diverse and match the scene composition
+
 Original             |  Augmented             |  Augmented
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](images/mp.jpeg)  |  ![](images/mp_1.png)  |  ![](images/mp_2.png)
