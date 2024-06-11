@@ -23,4 +23,4 @@ env:
 
 pytest:
 	$(CONDA_ACTIVATE) instance_aug
-	cd instance_augmentation/tests && PYTHONPATH=.. pytest . && cd ..
+	cd instance_augmentation/tests && PYTHONPATH=.. pytest . -s && cd ..

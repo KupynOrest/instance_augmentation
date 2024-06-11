@@ -148,10 +148,8 @@ class MaskAugmenter(Augmenter):
         for annotation in annotations:
             if random.random() < self.p:
                 mask = rle_decode(annotation["mask"], (original_image.shape[0], original_image.shape[1]), np.uint8)
-                x1, y1, x2, y2 = self._rescale_bbox(annotation["bbox"], original_image, augmented_image)
                 final_image = cv2.resize(final_image, (augmented_image.shape[1], augmented_image.shape[0]),
                                          interpolation=cv2.INTER_LANCZOS4)
-                original_mask = cv2.resize(original_mask, (augmented_image.shape[1], augmented_image.shape[0]), interpolation=cv2.INTER_LANCZOS4)
                 final_image = blend(final_image, augmented_image, mask)
                 original_mask = augmented_mask
         return final_image, original_mask

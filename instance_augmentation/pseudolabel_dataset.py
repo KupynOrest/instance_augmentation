@@ -59,9 +59,11 @@ class AnnotationPredictor:
 
     def get_annotations(self):
         images = self.get_images()
+        print(f"Found {len(images)} images")
         for image_path in tqdm(images):
             image = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
             annotation_data = self.predictor(image)
+            print(f"Found {len(annotation_data.bboxes)} annotations in {image_path}")
             _, filename = os.path.split(image_path)
             image_info = {
                 "id": self.image_id,
