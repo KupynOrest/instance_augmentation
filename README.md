@@ -4,7 +4,7 @@
 
 The code uses **Python 3.8**.
 
-#### Create a Conda virtual environment:
+#### Create a Conda virtual environment and Install The Package:
 
 Make sure you have Conda installed.
 
