@@ -1,0 +1,40 @@
+preprocessor:
+  _target_: pipeline.preprocessors.BaseDataPreprocessor
+
+image_generator:
+  generator_inference:
+    _target_: pipeline.diffusion_pipeline.InpaintControlNetInference
+    base_model: runwayml/stable-diffusion-inpainting
+  control_methods:
+    - depth
+    - hed
+  generation_config:
+    image_size: 768
+    required_generate: True
+    num_inference_steps: 40
+    guidance_scale:
+      - 7.0
+      - 7.5
+    condition_scale:
+      - 0.7
+      - 0.1
+
+postprocessor:
+  _target_: pipeline.postprocessors.AnnotationInpainter
+  exclude_categories:
+    - person
+
+dataset_config:
+  _target_: pipeline.readers.COCODatasetReader
+  data_path: data/COCO2017
+  dataset_config:
+    categories:
+      - person
+    min_area: 600
+    max_objects: -1
+    save_folder: data/COCO_augmented_people
+
+saver:
+  _target_: pipeline.converters.MetadataSaver
+  save_folder: data/COCO_augmented_people
+

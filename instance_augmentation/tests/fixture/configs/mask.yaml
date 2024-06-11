@@ -1,0 +1,33 @@
+image_size: 768
+
+preprocessor:
+  _target_: instance_augmentation.pipeline.preprocessors.ResizeDataPreprocessor
+  resize: ${image_size}
+
+image_generator:
+  generator_inference:
+    _target_: instance_augmentation.pipeline.diffusion_pipeline.InpaintControlNetInference
+    base_model: runwayml/stable-diffusion-inpainting
+  control_methods:
+    - depth
+    - hed
+  generation_config:
+    blend: false
+    image_size: ${image_size}
+    num_inference_steps: 50
+    guidance_scale:
+      - 5.0
+      - 7.5
+    condition_scale:
+      - 0.7
+      - 0.1
+
+postprocessor:
+  _target_: instance_augmentation.pipeline.postprocessors.BasePostprocessor
+
+dataset_config:
+  _target_: instance_augmentation.tests.reader.DummyMaskDatasetReader
+
+saver:
+  _target_: instance_augmentation.pipeline.converters.ImageSaver
+  save_folder: ./test_results

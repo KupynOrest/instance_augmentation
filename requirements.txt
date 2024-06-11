@@ -1,0 +1,20 @@
+torch==2.1.1
+opencv-python
+pytorch-toolbelt==0.6.3
+numpy==1.23.1
+diffusers==0.21.4
+controlnet_aux==0.0.6
+matplotlib==3.7.2
+ultralytics==8.2.31
+xformers==0.0.23
+nltk==3.8.1
+hydra-core==1.3.2
+albumentations==1.3.1
+imagesize==1.4.1
+pycocotools==2.0.7
+fire==0.5.0
+accelerate==0.22.0
+compel==2.0.2
+tinydb==4.8.0
+xmltodict==0.13.0
+-e git+https://github.com/huggingface/transformers.git

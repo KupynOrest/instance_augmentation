@@ -1,0 +1,37 @@
+preprocessor:
+  _target_: instance_augmentation.pipeline.preprocessors.BaseDataPreprocessor
+
+image_generator:
+  generator_inference:
+    _target_: instance_augmentation.pipeline.diffusion_pipeline.InpaintControlNetInference
+    base_model: runwayml/stable-diffusion-inpainting
+  control_methods:
+    - depth
+    - hed
+  generation_config:
+    resize: false
+    image_size: 768
+    num_inference_steps: 40
+    guidance_scale:
+      - 5.0
+      - 6.0
+      - 7.5
+      - 8.5
+    condition_scale:
+      - 0.7
+      - 0.1
+
+postprocessor:
+  _target_: instance_augmentation.pipeline.postprocessors.AnnotationInpainter
+
+dataset_config:
+  _target_: instance_augmentation.tests.reader.COCO4Reader
+  data_path: "./fixture/coco-4"
+  dataset_config:
+    min_area: 1
+    max_objects: 20
+    save_folder: ./test_results
+
+saver:
+  _target_: instance_augmentation.pipeline.converters.ImageSaver
+  save_folder: ./test_results
