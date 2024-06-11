@@ -1,5 +1,7 @@
 # Instance Augmentation
 
+![alt-text-1](images/mp.jpeg "Original") ![alt-text-2](images/mp_1.png "Augmented") ![alt-text-3](images/mp_2.png "Augmented")
+
 ## Installation
 
 The code uses **Python 3.8**.
