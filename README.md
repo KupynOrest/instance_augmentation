@@ -60,6 +60,7 @@ dataset_generator = DatasetGenerator.from_params(
 
 To apply augmentations:
 ```python
+import os
 import cv2
 import glob
 from instance_augmentation.augment import Augmenter
