@@ -1,8 +1,19 @@
+<div align="center">
+
 # Dataset Enhancement with Instance-Level Augmentations
 
 [![Paper](https://img.shields.io/badge/arXiv-2406.08249-brightgreen)](https://arxiv.org/abs/2406.08249)
 [![Conference](https://img.shields.io/badge/ECCV-2024-blue)](https://eccv2024.ecva.net/)
 [![Project WebPage](https://img.shields.io/badge/Project-webpage-%23fc4d5d)](https://instance-augmentation.github.io/)
+
+</div>
+
+This is an official repository for the paper
+```
+Dataset Enhancement with Instance-Level Augmentations
+Orest Kupyn, Christian Rupprecht
+ECCV 2024
+```
 
 Instance Augmentation method augment images by redrawing individual objects in the scene retaining their original shape. This allows training with the unchanged class label (e.g. class, segmentation, detection, etc.). The generations are highly diverse and match the scene composition
 
@@ -72,5 +83,19 @@ for image_path in glob.glob("path_to_image_folder/*"):
     image_name = os.path.split(image_path)[1]
     original_image = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
     augmented_image = augmenter.augment_image(original_image, image_name)
+
+```
+
+## Citation
+
+If you use the the method or this code - implicitly or explicitly - for your research projects, please cite the following paper:
+
+```
+@article{kupyn2024dataset,
+    title = {Dataset Enhancement with Instance-Level Augmentations},
+    author = {Kupyn, Orest and Rupprecht, Christian},
+    journal = {arXiv preprint arXiv:2406.08249},
+    year = {2024}
+  }
 
 ```
