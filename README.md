@@ -1,6 +1,8 @@
 # Dataset Enhancement with Instance-Level Augmentations
 
 [![Paper](https://img.shields.io/badge/arXiv-2406.08249-brightgreen)](https://arxiv.org/abs/2406.08249)
+[![Conference](https://img.shields.io/badge/ECCV-2024-blue)](https://eccv2024.ecva.net/)
+[![Project WebPage](https://img.shields.io/badge/Project-webpage-%23fc4d5d)](https://instance-augmentation.github.io/)
 
 Instance Augmentation method augment images by redrawing individual objects in the scene retaining their original shape. This allows training with the unchanged class label (e.g. class, segmentation, detection, etc.). The generations are highly diverse and match the scene composition
 
