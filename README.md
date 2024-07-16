@@ -4,7 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/arXiv-2406.08249-brightgreen)](https://arxiv.org/abs/2406.08249)
 [![Conference](https://img.shields.io/badge/ECCV-2024-blue)](https://eccv2024.ecva.net/)
-[![Project WebPage](https://img.shields.io/badge/Project-webpage-%23fc4d5d)](https://instance-augmentation.github.io/)
+[![Project WebPage](https://img.shields.io/badge/Project-webpage-%23fc4d5d)](https://www.robots.ox.ac.uk/~vgg/research/instance-augmentation/)
 
 </div>
 
