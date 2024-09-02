@@ -21,6 +21,39 @@ Original             |  Augmented             |  Augmented
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](images/mp.jpeg)  |  ![](images/mp_1.png)  |  ![](images/mp_2.png)
 
+
+# Augmented Datasets
+
+This repository contains links to several augmented datasets that can be used for various computer vision tasks, such as object detection, instance segmentation, and saliency detection.
+
+## Datasets
+
+1. **COCO Augmented Car**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented_Car.tar](https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented_Car.tar)
+   - Description: An anonymized version of the COCO dataset, focusing on the "car" class.
+
+2. **COCO Augmented People**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented_People.tar](https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented_People.tar)
+   - Description: An anonymized verison of the COCO dataset, focusing on the "person" class.
+
+3. **COCO Augmented**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented.tar](https://thor.robots.ox.ac.uk/instance-augmentation/COCO_Augmented.tar)
+   - Description: An augmented version of the entire COCO dataset.
+
+4. **DUTS Augmented**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/DUTS_Augmented.tar](https://thor.robots.ox.ac.uk/instance-augmentation/DUTS_Augmented.tar)
+   - Description: An augmented version of the DUTS dataset, which is commonly used for saliency detection.
+
+5. **DUTS SDXL (Experimental)**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/DUTS_SDXL.tar](https://thor.robots.ox.ac.uk/instance-augmentation/DUTS_SDXL.tar)
+   - Description: A larger, augmented version of the DUTS dataset.
+
+6. **SHA512 Checksums**:
+   - Link: [https://thor.robots.ox.ac.uk/instance-augmentation/SHA512SUMS](https://thor.robots.ox.ac.uk/instance-augmentation/SHA512SUMS)
+   - Description: A file containing the SHA512 checksums for the above augmented datasets, which can be used to verify the integrity of the downloaded files.
+
+Please note that these augmented datasets are provided for research purposes. If you plan to use these datasets in your projects, make sure to follow the appropriate licensing and citation requirements.
+
 ## Installation
 
 The code uses **Python 3.8**.
